@@ -8,6 +8,8 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jbuilder', '~> 2.7'
+gem 'kaminari'
+gem 'ransack'
 
 group :test do
   gem 'database_cleaner-active_record'

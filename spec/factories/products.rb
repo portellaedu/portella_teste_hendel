@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :product do
-    name { Faker::Commerce.product_name }
+    sequence(:name) { |n| "Product #{n}" }
     description { Faker::Lorem.sentences.join }
     price { Faker::Commerce.price }
     quantity { Faker::Number.between(from: 0, to: 50) }

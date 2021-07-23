@@ -7,24 +7,73 @@ RSpec.describe '/products', type: :request do
   describe 'GET /index' do
     let!(:product) { Product.create! valid_attributes }
 
-    before { get products_url, as: :json }
+    context 'without pagination' do
 
-    it { expect(response).to have_http_status(:ok) }
+      before { get products_url, as: :json }
 
-    it 'renders a JSON response with a list of products' do
-      expect(response.body).to include_json(
-        [
-          {
-            id: product.id,
-            name: product.name,
-            description: product.description,
-            price: product.price.as_json,
-            quantity: product.quantity,
-            created_at: product.created_at.as_json,
-            updated_at: product.updated_at.as_json
-          }
-        ]
-      )
+      it { expect(response).to have_http_status(:ok) }
+
+      it 'renders a JSON response with a list of products' do
+        expect(response.body).to include_json(
+          [
+            {
+              id: product.id,
+              name: product.name,
+              description: product.description,
+              price: product.price.as_json,
+              quantity: product.quantity,
+              created_at: product.created_at.as_json,
+              updated_at: product.updated_at.as_json
+            }
+          ]
+        )
+      end
+    end
+
+    context 'with pagination' do
+
+      context 'when pagination params is blank' do
+
+        let!(:product) { FactoryBot.create_list(:product, 30) }
+
+        before { get products_url, as: :json }
+
+        it { expect(response).to have_http_status(:ok) }
+        
+        it 'returns 20 products' do
+          products = JSON.parse response.body
+          expect(products.count).to equal(20)
+        end
+      end
+      
+      context 'when pagination params is present' do
+
+        let!(:product) { FactoryBot.create_list(:product, 30) }
+
+        before { get products_url(page: 1, per: 10), as: :json }
+
+        it { expect(response).to have_http_status(:ok) }
+        
+        it 'returns 10 products' do
+          products = JSON.parse response.body
+          expect(products.count).to equal(10)
+        end
+      end
+
+      context 'when per params is greater than 100' do
+
+        let!(:product) { FactoryBot.create_list(:product, 110) }
+
+        before { get products_url(page: 1, per: 110), as: :json }
+
+        it { expect(response).to have_http_status(:ok) }
+        
+        it 'returns 100 products' do
+          products = JSON.parse response.body
+          expect(products.count).to equal(100)
+        end
+      end
+
     end
   end
 

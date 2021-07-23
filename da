@@ -1,0 +1,137 @@
+[33mcommit cd0cd7669b9cc5732db87621e79f0d3f48ad64d2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Fri Jul 23 19:35:16 2021 -0300
+
+    f
+
+[33mcommit 498ddd662ba4b3114fec1eefd5ca1327496e564b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Rodrigo Mageste R. Pereira <rodrigo.mgst@gmail.com>
+Date:   Wed Jul 21 01:55:17 2021 -0300
+
+    e
+
+[33mcommit bf164843d6354465ec2b5ad1dc942ec82a10d2bc[m
+Author: Rodrigo Mageste R. Pereira <rodrigo.mgst@gmail.com>
+Date:   Wed Jul 21 01:44:58 2021 -0300
+
+    d
+
+[33mcommit bdbad24b0b0ea94cdfedbf21a5e984cd0da903d1[m
+Author: Rodrigo Mageste R. Pereira <rodrigo.mgst@gmail.com>
+Date:   Wed Jul 21 01:38:43 2021 -0300
+
+    c
+
+[33mcommit ec2155337dbbc3dce1a8c2482d86c8c9ea8826eb[m
+Author: Rodrigo Mageste R. Pereira <rodrigo.mgst@gmail.com>
+Date:   Wed Jul 21 01:06:19 2021 -0300
+
+    b
+
+[33mcommit 617acecee3a70ac9bd867b9013a2061d20526926[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Wed Jul 21 00:10:12 2021 -0300
+
+    a
+
+[33mcommit 0d8d11c225288ecc4bc11e5f165bb7544c406339[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Tue Jul 20 01:06:02 2021 -0300
+
+    Order params, add ransack and filter by attributes
+
+[33mcommit 2131bc15f59b32885bce8dca5cff921fbcce020e[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Mon Jul 19 23:59:56 2021 -0300
+
+    Tests to pagination params
+
+[33mcommit a3741cede706692f3fc7f0509f951afa62a3e0b8[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Mon Jul 19 22:50:30 2021 -0300
+
+    Set to 100 results if params per is greater than 100
+
+[33mcommit c4d53162c97ad2d084d32e0b73fb8071c1df0c30[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Mon Jul 19 22:34:12 2021 -0300
+
+    customize results per page
+
+[33mcommit 6e5be7387a661dced5298edd985dfb3dd28414b0[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Mon Jul 19 16:05:41 2021 -0300
+
+    Configurar kaminari para mostrar 20 itens por pagina
+
+[33mcommit 95e666eab11a0c871f73aeb58c94093dbe71eee3[m
+Author: Eduardo Portella <portella.edu@gmail.com>
+Date:   Mon Jul 19 15:31:23 2021 -0300
+
+    Add gem kaminari
+
+[33mcommit a2602c57f11f4448cc0877367367e6f01058337d[m
+Author: fabianearaujo <bia.fabianearaujo@gmail.com>
+Date:   Wed Jul 7 20:20:01 2021 -0300
+
+    Update README.md
+
+[33mcommit e50c295989564012865519f8ef4383ae948a9009[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Wed Jul 7 18:33:14 2021 -0300
+
+    Update README.md
+
+[33mcommit e73c1c7da497f62aea87a77dab61c23c68a5ee81[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Wed Jul 7 01:32:02 2021 -0300
+
+    add json format in spec routes
+
+[33mcommit 6e9a057be7a1dce9b560cc903bef3d9ba6c8184d[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Wed Jul 7 01:27:06 2021 -0300
+
+    add default format to json
+
+[33mcommit 134156be525e05710e7adb90441176b396fc3947[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Tue Jul 6 00:36:58 2021 -0300
+
+    update README
+
+[33mcommit b67cf3fcd024df5d42ab29ec6e55f248311c237b[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Tue Jul 6 00:05:15 2021 -0300
+
+    update seed
+
+[33mcommit 67b6ebda9621be8df8068b85215c6e87878dfbd8[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Mon Jul 5 22:47:02 2021 -0300
+
+    add seeds
+
+[33mcommit 9cf43f71cb0b939a3737ece1c89d0f1a1783fd36[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Mon Jul 5 22:46:54 2021 -0300
+
+    creates crud to products
+
+[33mcommit c488e196a6af702f434a323cb8599c7a7762d6d5[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Mon Jul 5 22:46:00 2021 -0300
+
+    creates product model
+
+[33mcommit cc20eb693f076de0e460e2613cbf43a7d681e93d[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Mon Jul 5 22:44:15 2021 -0300
+
+    configures rspec
+
+[33mcommit 9f57028386297c80971822ea1b9fa674507ee343[m
+Author: Wallas Faria <wallasfaria@hotmail.com>
+Date:   Mon Jul 5 19:50:33 2021 -0300
+
+    initial commit

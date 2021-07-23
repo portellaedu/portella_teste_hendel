@@ -117,6 +117,9 @@ rspec -f doc
   - [create](#create-a-product)
   - [update](#update-a-product)
   - [delete](#delete-a-product)
+- RelatedProduct
+    - [create](#create-a-related-product)
+    - [delete](#delete-a-reletead-product)
 
 ### List Products
 ```
@@ -152,7 +155,14 @@ GET /products/:id
   "price": "10.99",
   "quantity": 50,
   "created_at": "2021-07-05T23:13:17.383Z",
-  "created_at": "2021-07-05T23:13:17.383Z"
+  "updated_at": "2021-07-05T23:13:17.383Z",
+  "related_prooducts": [
+    {
+      "id": 22,
+      "name": "Product test",
+      "price": "10.99"
+    }
+  ]
 }
 ```
 
@@ -246,4 +256,36 @@ null
 {
   "errors": ["Couldn't find Product with 'id'=22"]
 }
+```
+
+### Create a Related Product
+```
+POST /products/:product_id/related_products
+```
+
+```json
+// request body
+{
+  "related_product_id": 22
+}
+```
+
+```json
+// response body, status: 201
+{
+  "id": 22,
+  "name": "Product test",
+  "price": "10.99"
+}
+```
+
+### Delete a Related Product
+
+```
+DELETE /products/:product_id/related_product/:id
+```
+
+```json
+// response body, status: 204
+null
 ```

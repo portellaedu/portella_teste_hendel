@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    @q = Product.ransack(params[:q])
+    @products = @q.result.order(order_products).page(params[:page]).per(results_per_page)
   end
 
   def show; end
@@ -41,5 +42,17 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :description, :price, :quantity)
+  end
+
+  def results_per_page
+    params[:per] = params[:per].to_i > 100 ? 100 : params[:per]
+  end
+
+  def order_products
+    if Product.column_names.include? params[:order_attribute]
+      "#{params[:order_attribute]} #{params[:order]}"
+    else
+      "id ASC"
+    end
   end
 end
